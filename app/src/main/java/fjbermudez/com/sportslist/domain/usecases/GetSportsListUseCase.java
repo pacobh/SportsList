@@ -1,5 +1,7 @@
 package fjbermudez.com.sportslist.domain.usecases;
 
+import java.util.List;
+
 import fjbermudez.com.sportslist.data.repository.DataSource;
 import fjbermudez.com.sportslist.data.responses.SportListResponse;
 import fjbermudez.com.sportslist.data.responses.SportListResponseError;
@@ -18,7 +20,7 @@ public class GetSportsListUseCase extends UseCase<GetSportsListUseCase.RequestVa
     protected void executeUseCase(RequestValues requestValues) {
         dataSource.getSportsList(new DataSource.GetSportsListCallback() {
             @Override
-            public void onGetSportsListSuccess(SportListResponse sportListResponse) {
+            public void onGetSportsListSuccess(List<SportListResponse> sportListResponse) {
                 getUseCaseCallback().onSuccess(new ResponseValue(sportListResponse));
             }
 
@@ -43,14 +45,14 @@ public class GetSportsListUseCase extends UseCase<GetSportsListUseCase.RequestVa
      * Conforma el tipo de respuesta
      */
     public static final class ResponseValue implements UseCase.ResponseValue {
-        private final SportListResponse sportListResponse;
+        private final List<SportListResponse> sportListResponseList;
 
-        public ResponseValue(SportListResponse sportListResponse) {
-            this.sportListResponse = sportListResponse;
+        public ResponseValue(List<SportListResponse> sportListResponseList) {
+            this.sportListResponseList = sportListResponseList;
         }
 
-        public SportListResponse getSportListResponse() {
-            return sportListResponse;
+        public List<SportListResponse> getSportListResponseList() {
+            return sportListResponseList;
         }
     }
 

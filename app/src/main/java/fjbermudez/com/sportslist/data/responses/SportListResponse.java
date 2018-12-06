@@ -5,9 +5,19 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class SportListResponse implements Serializable{
 
+//    private List<Sport> sportList;
+//
+//    public List<Sport> getSportList() {
+//        return sportList;
+//    }
+//
+//    public void setSportList(List<Sport> sportList) {
+//        this.sportList = sportList;
+//    }
     @SerializedName("type")
     @Expose
     private String type;
@@ -18,7 +28,7 @@ public class SportListResponse implements Serializable{
 
     @SerializedName("players")
     @Expose
-    private Players players;
+    private List <Players> playersList;
 
     public String getType() {
         return type;
@@ -36,11 +46,11 @@ public class SportListResponse implements Serializable{
         this.title = title;
     }
 
-    public Players getPlayers() {
-        return players;
+    public List<Players> getPlayersList() {
+        return playersList;
     }
 
-    public void setPlayers(Players players) {
-        this.players = players;
+    public void setPlayersList(List<Players> playersList) {
+        this.playersList = playersList;
     }
 }

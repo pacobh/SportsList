@@ -5,8 +5,12 @@ import android.support.annotation.NonNull;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
+import java.lang.reflect.Type;
+import java.util.Collection;
+import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
@@ -44,6 +48,9 @@ public class RemoteDataSource implements DataSource {
         if (BuildConfig.DEBUG) {
             gson = new GsonBuilder().setLenient().create();
         }
+//        Type collectionType = new TypeToken<Collection<SportListResponse>>(){}.getType();
+//        List<SportListResponse> posts = gson.fromJson(jsonOutput, listType);
+//        gson.
 
         Retrofit retrofit = new Retrofit.Builder()
 
@@ -118,13 +125,13 @@ public class RemoteDataSource implements DataSource {
     @Override
     public void getSportsList(final GetSportsListCallback getSportsListCallback) {
 
-            final Call<SportListResponse> sportListResponseCall = apiServices.getSportsList();
+            final Call<List<SportListResponse>> sportListResponseCall = apiServices.getSportsList();
             try {
-                sportListResponseCall.enqueue(new Callback<SportListResponse>() {
+                sportListResponseCall.enqueue(new Callback<List<SportListResponse>>() {
 
 
                     @Override
-                    public void onResponse(Call<SportListResponse> call, Response<SportListResponse> response) {
+                    public void onResponse(Call<List<SportListResponse>> call, Response<List<SportListResponse>> response) {
 
                         if (response != null && response.isSuccessful() && response.body() != null) {
                             getSportsListCallback.onGetSportsListSuccess(response.body());
@@ -132,7 +139,7 @@ public class RemoteDataSource implements DataSource {
                     }
 
                     @Override
-                    public void onFailure(Call<SportListResponse> call, Throwable t) {
+                    public void onFailure(Call<List<SportListResponse>> call, Throwable t) {
 
                         getSportsListCallback.onGetSportsListFailure(new SportListResponseError(t.getMessage()));
                     }
