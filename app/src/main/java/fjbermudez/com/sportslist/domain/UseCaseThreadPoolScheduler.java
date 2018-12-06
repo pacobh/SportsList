@@ -22,6 +22,8 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
+import fjbermudez.com.sportslist.data.responses.SportListResponseError;
+
 /**
  * Executes asynchronous tasks using a {@link ThreadPoolExecutor}.
  * <p>
@@ -64,7 +66,7 @@ public class UseCaseThreadPoolScheduler implements UseCaseScheduler {
     }
 
     @Override
-    public <V extends UseCase.ResponseValue> void onError(final V responseError,
+    public <V extends UseCase.ResponseValue> void onError(final SportListResponseError responseError,
                                                           final UseCase.UseCaseCallback<V> useCaseCallback) {
         mHandler.post(new Runnable() {
             @Override

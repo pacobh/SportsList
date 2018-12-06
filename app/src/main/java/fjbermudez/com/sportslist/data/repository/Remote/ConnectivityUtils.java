@@ -15,7 +15,11 @@ public class ConnectivityUtils {
 
         ConnectivityManager cm =
                 (ConnectivityManager) AppSports.getAppSportsContext().getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        NetworkInfo netInfo = null;
+
+        if (cm != null) {
+            netInfo = cm.getActiveNetworkInfo();
+        }
 
         if(netInfo!=null && netInfo.isConnected()){
             return true;

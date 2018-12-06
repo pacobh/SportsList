@@ -20,6 +20,7 @@ import okhttp3.CacheControl;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -103,13 +104,20 @@ public class RemoteDataSource implements DataSource {
         httpClientBuilder.readTimeout(60, TimeUnit.SECONDS);
 
 
+        httpClientBuilder.addInterceptor(createLogInterceptor());
+
         return httpClientBuilder.build();
+    }
+
+    public HttpLoggingInterceptor createLogInterceptor() {
+        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        return interceptor;
     }
 
     @Override
     public void getSportsList(final GetSportsListCallback getSportsListCallback) {
 
-        if (ConnectivityUtils.isConnected()) {
             final Call<SportListResponse> sportListResponseCall = apiServices.getSportsList();
             try {
                 sportListResponseCall.enqueue(new Callback<SportListResponse>() {
@@ -135,8 +143,6 @@ public class RemoteDataSource implements DataSource {
 
                 getSportsListCallback.onGetSportsListFailure(new SportListResponseError(e.getMessage()));
             }
-        }else{
-            getSportsListCallback.onGetSportsListFailure(new SportListResponseError(AppSports.getAppSportsContext().getString(R.string.no_connectivity)));
         }
-    }
+
 }
