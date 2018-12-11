@@ -3,4 +3,8 @@
     <string name="no_connectivity">No tiene acceso a internet, inténtelo de nuevo más tarde.</string>
     <string name="accept">Aceptar</string>
     <string name="error_title">Ups! Se ha producido un error</string>
+    <string name="golf_title">Golf</string>
+    <string name="football_title">Football</string>
+    <string name="tennis_title">Tennis</string>
+    <string name="formula_one_title">Formula One</string>
 </resources>

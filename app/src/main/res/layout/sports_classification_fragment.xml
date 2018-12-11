@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_button"
+        android:elevation="@dimen/elevation"
+        android:id="@+id/rlGolf"
+        android:background="@drawable/shape_buttons"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_40"
+        android:layout_marginBottom="@dimen/margin_16"
+        tools:targetApi="lollipop"
+        android:layout_marginLeft="@dimen/margin_16">
+
+        <ImageView
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            android:id="@+id/ivGolf"
+            android:padding="@dimen/margin_4"
+            android:layout_marginEnd="@dimen/margin_4"
+            android:layout_centerVertical="true"
+            android:src="@drawable/golf"
+            android:layout_alignParentStart="true"
+            android:scaleType="fitXY"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="@dimen/margin_4" />
+
+        <View
+            android:layout_width="@dimen/width_view_separator"
+            android:layout_height="match_parent"
+            android:id="@+id/viewSeparator"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:background="@color/colorPrimary"
+            android:layout_toRightOf="@id/ivGolf"
+            android:layout_toEndOf="@id/ivGolf"
+            android:layout_marginRight="@dimen/margin_8" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/viewSeparator"
+            android:textColor="@color/colorPrimary"
+            android:textAlignment="center"
+            android:text="@string/golf_title"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/viewSeparator" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_button"
+        android:id="@+id/rlFootball"
+        android:elevation="@dimen/elevation"
+        android:background="@drawable/shape_buttons"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_16"
+        tools:targetApi="lollipop"
+        android:layout_marginLeft="@dimen/margin_16">
+
+        <ImageView
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            android:id="@+id/ivFootball"
+            android:padding="@dimen/margin_4"
+            android:layout_marginEnd="@dimen/margin_4"
+            android:layout_centerVertical="true"
+            android:src="@drawable/football"
+            android:layout_alignParentStart="true"
+            android:scaleType="fitXY"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="@dimen/margin_4" />
+
+        <View
+            android:layout_width="@dimen/width_view_separator"
+            android:layout_height="match_parent"
+            android:id="@+id/viewSeparatorFootball"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:background="@color/colorPrimary"
+            android:layout_toRightOf="@id/ivFootball"
+            android:layout_toEndOf="@id/ivFootball"
+            android:layout_marginRight="@dimen/margin_8" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/viewSeparatorFootball"
+            android:textColor="@color/colorPrimary"
+            android:textAlignment="center"
+            android:text="@string/football_title"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/viewSeparatorFootball" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_button"
+        android:id="@+id/rlTennis"
+        android:elevation="@dimen/elevation"
+        android:background="@drawable/shape_buttons"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_16"
+        tools:targetApi="lollipop"
+        android:layout_marginLeft="@dimen/margin_16">
+
+        <ImageView
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            android:id="@+id/ivTennis"
+            android:padding="@dimen/margin_4"
+            android:layout_marginEnd="@dimen/margin_4"
+            android:layout_centerVertical="true"
+            android:src="@drawable/tenis"
+            android:layout_alignParentStart="true"
+            android:scaleType="fitXY"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="@dimen/margin_4" />
+
+        <View
+            android:layout_width="@dimen/width_view_separator"
+            android:layout_height="match_parent"
+            android:id="@+id/viewSeparatorTennis"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:background="@color/colorPrimary"
+            android:layout_toRightOf="@id/ivTennis"
+            android:layout_toEndOf="@id/ivTennis"
+            android:layout_marginRight="@dimen/margin_8" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/viewSeparatorTennis"
+            android:textColor="@color/colorPrimary"
+            android:textAlignment="center"
+            android:text="@string/tennis_title"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/viewSeparatorTennis" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_button"
+        android:id="@+id/rlFormula1"
+        android:elevation="@dimen/elevation"
+        android:background="@drawable/shape_buttons"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_16"
+        tools:targetApi="lollipop"
+        android:layout_marginLeft="@dimen/margin_16">
+
+        <ImageView
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            android:id="@+id/ivFormula1"
+            android:padding="@dimen/margin_4"
+            android:layout_marginEnd="@dimen/margin_4"
+            android:layout_centerVertical="true"
+            android:src="@drawable/formula1"
+            android:layout_alignParentStart="true"
+            android:scaleType="fitXY"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="@dimen/margin_4" />
+
+        <View
+            android:layout_width="@dimen/width_view_separator"
+            android:layout_height="match_parent"
+            android:id="@+id/viewSeparatorFormula1"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:background="@color/colorPrimary"
+            android:layout_toRightOf="@id/ivFormula1"
+            android:layout_toEndOf="@id/ivFormula1"
+            android:layout_marginRight="@dimen/margin_8" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/viewSeparatorFormula1"
+            android:textColor="@color/colorPrimary"
+            android:textAlignment="center"
+            android:text="@string/formula_one_title"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/viewSeparatorFormula1" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
