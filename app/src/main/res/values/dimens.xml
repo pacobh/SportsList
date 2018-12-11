@@ -10,5 +10,7 @@
     <dimen name="elevation">5dp</dimen>
     <dimen name="margin_40">40dp</dimen>
     <dimen name="margin_6">6dp</dimen>
+    <dimen name="image_players_size">120dp</dimen>
+    <dimen name="margin_32">32dp</dimen>
 
 </resources>

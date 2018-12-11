@@ -3,7 +3,9 @@ package fjbermudez.com.sportslist.data.responses;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Players {
+import java.io.Serializable;
+
+public class Players implements Serializable {
 
     @SerializedName("image")
     @Expose

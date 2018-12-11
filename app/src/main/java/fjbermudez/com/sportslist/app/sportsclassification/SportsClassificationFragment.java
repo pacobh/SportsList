@@ -115,21 +115,24 @@ public class SportsClassificationFragment extends BaseFragment implements ISport
 
     @Override
     public void goToFormulaOnePlayersView(SportListResponse sportListResponse) {
-        SportsListFragment sportsListFragment = SportsListFragment.newInstance(sportListResponse);
+        SportsListFragment sportsListFragment = SportsListFragment.newInstance(SportsClassificationConstants.SPORT_FORMULA_ONE,
+                sportListResponse.getPlayersList());
         showSportFragment(sportsListFragment);
 
     }
 
     @Override
     public void goToTennisPlayersView(SportListResponse sportListResponse) {
-        SportsListFragment sportsListFragment = SportsListFragment.newInstance(sportListResponse);
+        SportsListFragment sportsListFragment = SportsListFragment.newInstance(SportsClassificationConstants.SPORT_TENNIS,
+                sportListResponse.getPlayersList());
         showSportFragment(sportsListFragment);
 
     }
 
     @Override
     public void goToFootballPlayersView(SportListResponse sportListResponse) {
-        SportsListFragment sportsListFragment = SportsListFragment.newInstance(sportListResponse);
+        SportsListFragment sportsListFragment = SportsListFragment.newInstance(SportsClassificationConstants.SPORT_FOOTBALL,
+                sportListResponse.getPlayersList());
         showSportFragment(sportsListFragment);
 
     }
@@ -137,7 +140,8 @@ public class SportsClassificationFragment extends BaseFragment implements ISport
     @Override
     public void goToGolfPlayersView(SportListResponse sportListResponse) {
 
-        SportsListFragment sportsListFragment = SportsListFragment.newInstance(sportListResponse);
+        SportsListFragment sportsListFragment = SportsListFragment.newInstance(SportsClassificationConstants.SPORT_GOLF,
+                sportListResponse.getPlayersList());
 
         showSportFragment(sportsListFragment);
     }

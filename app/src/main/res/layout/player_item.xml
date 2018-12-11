@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="@dimen/margin_8"
+    android:background="@drawable/shape_buttons"
+    android:layout_width="match_parent"
+    android:elevation="5dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="@dimen/image_players_size"
+        android:layout_height="@dimen/image_players_size"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="@dimen/margin_8"
+        android:padding="10dp"
+        android:id="@+id/ivImage"
+        android:layout_marginLeft="@dimen/margin_8" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimary"
+            android:textAlignment="center"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            android:id="@+id/tvName" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimary"
+            android:textAlignment="center"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            android:id="@+id/tvSurname" />
+
+
+    </LinearLayout>
+</LinearLayout>

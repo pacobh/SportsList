@@ -1,5 +1,6 @@
 package fjbermudez.com.sportslist.app.sportsclassification;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import fjbermudez.com.sportslist.data.responses.SportListResponse;
@@ -14,7 +15,7 @@ public class SportsClassificationPresenter implements ISportsClassificationPrese
 
     private GetSportsListUseCase getSportsListUseCase;
     private UseCaseHandler mUseCaseHandler;
-    private List<SportListResponse> sportListResponseList;
+    private List<SportListResponse> sportListResponseList = new ArrayList<>();
 
     public SportsClassificationPresenter(ISportsClassification mView,
                                          GetSportsListUseCase getSportsListUseCase,
